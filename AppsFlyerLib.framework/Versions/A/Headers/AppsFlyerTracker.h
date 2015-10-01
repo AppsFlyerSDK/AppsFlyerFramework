@@ -85,7 +85,6 @@ typedef enum  {
 
 /*
  * This delegate should be use if you want to use AppsFlyer conversion data. See AppsFlyer iOS
- * Tracking SDK documentation for more details http://support.appsflyer.com/entries/25458906-iOS-SDK-Integration-Guide-v2-5-3-x-New-API-
  */
 @protocol AppsFlyerTrackerDelegate <NSObject>
 
@@ -235,8 +234,8 @@ typedef enum  {
  * For Universal links iOS 9
  */
 
--(void) continueUserActivity:(NSUserActivity *) userActivity restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(8_0);
--(void) didUpdateUserActivity:(NSUserActivity *)userActivity NS_AVAILABLE_IOS(8_0);
+-(void) continueUserActivity:(NSUserActivity *) userActivity restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(9_0);
+-(void) didUpdateUserActivity:(NSUserActivity *)userActivity NS_AVAILABLE_IOS(9_0);
 
 
 @end
