@@ -2,8 +2,8 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v3.3.1
-//  10-Sep-2015
+//  AppsFlyer iOS SDK v3.3.2
+//  06-Oct-2015
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 //  Please read AppsFlyer's iOS SDK documentation before integrating this library in your app:
@@ -45,7 +45,7 @@
 #define AFEventParamContentId              @"af_content_id"
 #define AFEventParamContentList            @"ad_content_list"
 #define AFEventParamCurrency               @"af_currency"
-#define AFEventParamQuantity               @"af_quantity" //quantity
+#define AFEventParamQuantity               @"af_quantity"
 #define AFEventParamRegistrationMethod     @"af_registration_method"
 #define AFEventParamPaymentInfoAvailable   @"af_payment_info_available"
 #define AFEventParamMaxRatingValue         @"af_max_rating_value"

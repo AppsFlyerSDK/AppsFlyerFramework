@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'AppsFlyerFramework'
-  spec.version      = '3.3.1'
+  spec.version      = '3.3.2'
   spec.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE
@@ -13,10 +13,10 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
     AppsFlyer's NativeTrack allows you to find what attracts new users to your app, measure all your app marketing activities on one dashboard, and add new traffic sources in minutes, all without having to update SDK's.
   DESC
-  spec.platform     = :ios, '7.0'
+  spec.platform     = :ios, '6.0'
   spec.requires_arc = true
   spec.frameworks   = 'AdSupport', 'iAd'
-  spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => '3.3.1'}
+  spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => '3.3.2'}
   spec.preserve_paths      = 'AppsFlyerLib.framework'
   spec.public_header_files = 'AppsFlyerLib.framework/Versions/A/Headers'
   spec.vendored_frameworks = 'AppsFlyerLib.framework'
