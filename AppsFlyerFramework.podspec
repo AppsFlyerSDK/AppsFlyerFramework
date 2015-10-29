@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'AppsFlyerFramework'
-  spec.version      = '3.3.2'
+  spec.version      = '3.3.3'
   spec.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '6.0'
   spec.requires_arc = true
   spec.frameworks   = 'AdSupport', 'iAd'
-  spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => '3.3.2'}
+  spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => '3.3.3'}
   spec.preserve_paths      = 'AppsFlyer.framework'
   spec.public_header_files = 'AppsFlyer.framework/Versions/A/Headers'
   spec.vendored_frameworks = 'AppsFlyer.framework'
