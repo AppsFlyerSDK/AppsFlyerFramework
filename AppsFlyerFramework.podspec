@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.frameworks   = 'AdSupport', 'iAd'
   spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => '4.3.5'}
-  spec.preserve_paths      = 'AppsFlyer.framework/*'
-  spec.public_header_files = 'AppsFlyer.framework/Versions/A/Headers/*'
-  spec.vendored_frameworks = 'AppsFlyer.framework/*'
+  spec.preserve_paths      = 'AppsFlyer.framework'
+  spec.public_header_files = 'AppsFlyer.framework/Versions/A/Headers'
+  spec.vendored_frameworks = 'AppsFlyer.framework'
 end
