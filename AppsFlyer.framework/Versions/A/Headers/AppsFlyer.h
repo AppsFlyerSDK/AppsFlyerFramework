@@ -2,12 +2,9 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v4.3.5
-//  13-Jan-2016
+//  AppsFlyer iOS SDK v4.3.6
+//  21-Jan-2016
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
-//
-//  Please read AppsFlyer's iOS SDK documentation before integrating this library in your app:
-//  https://support.appsflyer.com/attachments/token/wdWOAqKTlLu64zmbmXmU791p5/?name=AF-iOS-Integration-Guide-v3.3.0.pdf
 //
 
 #import <Foundation/Foundation.h>
