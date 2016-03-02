@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v4.3.7
+//  AppsFlyer iOS SDK v4.3.8
 //  21-Jan-2016
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
@@ -229,7 +229,7 @@ typedef enum  {
 /*
  * In case you want to track deep linking, call this method from your delegate's openURL method with refferer.
  */
-- (void) handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotaion:(id) annotation;
+- (void) handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication withAnnotation:(id) annotation;
 
 /* 
  * For Universal links iOS 9
@@ -237,7 +237,6 @@ typedef enum  {
 
 -(void) continueUserActivity:(NSUserActivity *) userActivity restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(9_0);
 -(void) didUpdateUserActivity:(NSUserActivity *)userActivity NS_AVAILABLE_IOS(9_0);
-
 -(void) handlePushNotification:(NSDictionary *) pushPayload;
 
 
