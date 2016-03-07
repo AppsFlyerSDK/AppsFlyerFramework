@@ -93,7 +93,7 @@ typedef enum  {
 
 @end
 
-@interface AppsFlyerTracker : NSObject <AppsFlyerTrackerDelegate>{
+@interface AppsFlyerTracker : NSObject {
 
     BOOL _isDebug;
     BOOL didCollectIAdData;
