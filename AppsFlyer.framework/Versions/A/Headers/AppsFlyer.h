@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v4.5.1
+//  AppsFlyer iOS SDK v4.5.2
 //  29-Jun-2016
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
@@ -236,7 +236,7 @@ typedef enum  {
  * For Universal links iOS 9
  */
 
--(void) continueUserActivity:(NSUserActivity *) userActivity restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(9_0);
+-(BOOL) continueUserActivity:(NSUserActivity *) userActivity restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(9_0);
 -(void) didUpdateUserActivity:(NSUserActivity *)userActivity NS_AVAILABLE_IOS(9_0);
 -(void) handlePushNotification:(NSDictionary *) pushPayload;
 

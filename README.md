@@ -1,7 +1,7 @@
 # AppsFlyerFramework
 
 Add:<br>
-pod 'AppsFlyerFramework', '~> 4.3'
+pod 'AppsFlyerFramework'
 
 Run pod install / update
 
