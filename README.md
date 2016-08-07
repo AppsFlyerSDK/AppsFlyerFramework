@@ -1,4 +1,7 @@
-# AppsFlyerFramework
+<p align="center">
+  <img height="75" src="repository_assets/AF_color_medium.png" />
+</p>
+------------
 
 [AppsFlyer](https://www.appsflyer.com/) helps mobile marketers measure and improve their performance through amazing tools, really big data and over 2,000 integrations.
 
