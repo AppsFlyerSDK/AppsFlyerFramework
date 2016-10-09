@@ -16,7 +16,7 @@ Then run `pod install`.
 
 Finally add `import AppsFlyer` in your Swift implementation.
 
-Or `#import <AppsFlyer/AppsFlyer.h>` if you're using Objective-C.
+Or `#import <AppsFlyerTracker/AppsFlyerTracker.h>` if you're using Objective-C.
 
 Changelog
 ------------
