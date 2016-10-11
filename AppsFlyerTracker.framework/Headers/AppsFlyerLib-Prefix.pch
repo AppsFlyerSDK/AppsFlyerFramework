@@ -7,4 +7,4 @@
 #endif
 
 #define kAppsFlyerSDKBuildNumber  @"4.5.7"
-#define kJenkinsBuildNumber  @"31"
+#define kJenkinsBuildNumber  @"500"
