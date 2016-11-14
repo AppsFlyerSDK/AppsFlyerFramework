@@ -16,7 +16,7 @@ Just add `pod 'AppsFlyerFramework'` into your [Podfile](https://guides.cocoapods
 
 Then run `pod install`.
 
-Finally add `import AppsFlyer` in your Swift implementation.
+Finally add `import AppsFlyerTracker` in your Swift implementation.
 
 Or `#import <AppsFlyerTracker/AppsFlyerTracker.h>` if you're using Objective-C.
 
