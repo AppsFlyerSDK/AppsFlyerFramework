@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v4.6.1
+//  AppsFlyer iOS SDK 4.6.2
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -65,14 +65,6 @@
 #define AFEventParamValidated              @"af_validated"
 #define AFEventParamRevenue                @"af_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
-#define AFEventParamTutorialId             @"af_tutorial_id"
-#define AFEventParamAchievenmentId         @"af_achievement_id"
-#define AFEventParamVirtualCurrencyName    @"af_virtual_currency_name"
-#define AFEventParamDeepLink               @"af_deep_link"
-#define AFEventParamOldVersion             @"af_old_version"
-#define AFEventParamNewVersion             @"af_new_version"
-#define AFEventParamReviewText             @"af_review_text"
-#define AFEventParamCouponCode             @"af_coupon_code"
 #define AFEventParam1                      @"af_param_1"
 #define AFEventParam2                      @"af_param_2"
 #define AFEventParam3                      @"af_param_3"
