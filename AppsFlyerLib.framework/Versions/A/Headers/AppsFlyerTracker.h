@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v4.6.3
+//  AppsFlyer iOS SDK 4.6.4
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -37,6 +37,7 @@
 
 
 // In app event parameter names
+#define AFEventParamAchievenmentId         @"af_achievement_id"
 #define AFEventParamLevel                  @"af_level"
 #define AFEventParamScore                  @"af_score"
 #define AFEventParamSuccess                @"af_success"
