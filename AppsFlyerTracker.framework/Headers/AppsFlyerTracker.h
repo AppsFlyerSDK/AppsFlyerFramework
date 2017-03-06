@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.6.5
+//  AppsFlyer iOS SDK 4.7.0
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -66,6 +66,14 @@
 #define AFEventParamValidated              @"af_validated"
 #define AFEventParamRevenue                @"af_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
+#define AFEventParamTutorialId             @"af_tutorial_id"
+#define AFEventParamAchievenmentId         @"af_achievement_id"
+#define AFEventParamVirtualCurrencyName    @"af_virtual_currency_name"
+#define AFEventParamDeepLink               @"af_deep_link"
+#define AFEventParamOldVersion             @"af_old_version"
+#define AFEventParamNewVersion             @"af_new_version"
+#define AFEventParamReviewText             @"af_review_text"
+#define AFEventParamCouponCode             @"af_coupon_code"
 #define AFEventParam1                      @"af_param_1"
 #define AFEventParam2                      @"af_param_2"
 #define AFEventParam3                      @"af_param_3"
@@ -76,6 +84,36 @@
 #define AFEventParam8                      @"af_param_8"
 #define AFEventParam9                      @"af_param_9"
 #define AFEventParam10                     @"af_param_10"
+
+#define AFEventParamDepartingDepartureDate  @"af_departing_departure_date"
+#define AFEventParamReturningDepartureDate  @"af_returning_departure_date"
+#define AFEventParamDestinationList         @"af_destination_list"  //array of string
+#define AFEventParamCity                    @"af_city"
+#define AFEventParamRegion                  @"af_region"
+#define AFEventParamCountry                 @"af_country"
+
+
+#define AFEventParamDepartingArrivalDate    @"af_departing_arrival_date"
+#define AFEventParamReturningArrivalDate    @"af_returning_arrival_date"
+#define AFEventParamSuggestedDestinations   @"af_suggested_destinations" //array of string
+#define AFEventParamTravelStart             @"af_travel_start"
+#define AFEventParamTravelEnd               @"af_travel_end"
+#define AFEventParamNumAdults               @"af_num_adults"
+#define AFEventParamNumChildren             @"af_num_children"
+#define AFEventParamNumInfants              @"af_num_infants"
+#define AFEventParamSuggestedHotels         @"af_suggested_hotels" //array of string
+
+#define AFEventParamUserScore               @"af_user_score"
+#define AFEventParamHotelScore              @"af_hotel_score"
+#define AFEventParamPurchaseCurrency        @"af_purchase_currency"
+
+#define AFEventParamPreferredStarRatings    @"af_preferred_star_ratings"	//array of int (basically a tupple (min,max) but we'll use array of int and instruct the developer to use two values)
+
+#define AFEventParamPreferredPriceRange     @"af_preferred_price_range"	//array of int (basically a tupple (min,max) but we'll use array of int and instruct the developer to use two values)
+#define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
+#define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
+
+
 
 
 typedef enum  {
@@ -218,6 +256,7 @@ typedef enum  {
                   additionalParameters:(NSDictionary *)params
                                success:(void (^)(NSDictionary *response))successBlock
                                failure:(void (^)(NSError *error, id reponse)) failedBlock NS_AVAILABLE(10_7, 7_0);
+
 
 
 /*
