@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.7.6
+//  AppsFlyer iOS SDK 4.7.7
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -203,7 +203,8 @@ typedef enum  {
 /*
  * AppsFlyer delegate. See AppsFlyerTrackerDelegate abvoe
  */
-@property (unsafe_unretained, nonatomic) id<AppsFlyerTrackerDelegate> delegate;
+//@property (unsafe_unretained, nonatomic) id<AppsFlyerTrackerDelegate> delegate; //RD-5419
+@property (weak, nonatomic) id<AppsFlyerTrackerDelegate> delegate;
 
 /*
  * In app purchase receipt validation Apple environment (production or sandbox). The default value
