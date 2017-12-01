@@ -27,7 +27,7 @@ For version 4.5.12 `#import <AppsFlyerLib/AppsFlyerTracker.h>`
 Changelog
 ------------
 
-You can find the release changelog [here](https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS).
+You can find the release changelog [here](https://support.appsflyer.com/hc/en-us/articles/115001224823-AppsFlyer-iOS-SDK-Release-Notes).
 
 ---
 
