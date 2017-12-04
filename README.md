@@ -39,7 +39,7 @@ import AppsFlyerLib
 
 Just add the following into your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 ```
-binary "https://raw.githubusercontent.com/RxSwiftCommunity/RxKeyboard/master/Carthage.json"
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage.json"
 ```
 
 Then run
