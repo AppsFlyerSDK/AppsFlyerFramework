@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.8.2 (617)
+//  AppsFlyer iOS SDK 4.8.3 (625)
 //  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -36,10 +36,10 @@
 #define AFEventOpenedFromPushNotification @"af_opened_from_push_notification"
 #define AFEventLocation                 @"af_location_coordinates"
 #define AFEventCustomerSegment          @"af_customer_segment"
-#define AFEventContent                  @"af_content"
 
 
 // In app event parameter names
+#define AFEventParamContent                @"af_content"
 #define AFEventParamAchievenmentId         @"af_achievement_id"
 #define AFEventParamLevel                  @"af_level"
 #define AFEventParamScore                  @"af_score"
@@ -187,8 +187,8 @@ typedef enum  {
 @property (nonatomic, setter = setIsDebug:) BOOL isDebug;
 
 
-/*
- * Set this flag to NO, to not collect the device name.
+/*!
+ *  Set this flag to `YES`, to collect the current device name. Default value is `NO`
  */
 @property (nonatomic, setter = setShouldCollectDeviceName:) BOOL shouldCollectDeviceName;
 
@@ -333,5 +333,10 @@ typedef enum  {
  *  Default value is 5 seconds.
  */
 @property (atomic) NSUInteger minTimeBetweenSessions;
-    
+
+/*!
+ *  WARNING! This will disable all requests from AppsFlyer SDK
+ */
+@property (atomic) BOOL isStopTracking;
+
 @end
