@@ -17,12 +17,36 @@ Installation
 
 Just add `pod 'AppsFlyerFramework'` into your [Podfile](https://guides.cocoapods.org/syntax/podfile.html).
 
-Then run `pod install`.
+Then run
 
-Finally add `import AppsFlyerLib` in your Swift implementation.
+```zsh
+$ pod install
+```
 
-Or `#import <AppsFlyerTracker/AppsFlyerTracker.h>` if you're using Objective-C.<br>
-For version 4.5.12 `#import <AppsFlyerLib/AppsFlyerTracker.h>`
+Finally, import the framework:
+
+```swift
+// Swift
+import AppsFlyerLib
+```
+
+```objc
+// ObjC
+#import <AppsFlyerTracker/AppsFlyerTracker.h>
+```
+
+### Carthage
+
+Just add the following into your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
+```
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage.json"
+```
+
+Then run
+
+```zsh
+$ carthage bootstrap
+```
 
 Changelog
 ------------
