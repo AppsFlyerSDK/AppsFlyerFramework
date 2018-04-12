@@ -40,7 +40,7 @@ import AppsFlyerLib
 
 Just add the following into your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 ```
-binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage.json"
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
 Then run
@@ -48,6 +48,11 @@ Then run
 ```zsh
 $ carthage bootstrap
 ```
+
+**Note :**
+Old URI referencing `Carthage.json` is deprecated. If you use it please update your Cartfife to the new one to ease dependecy management.
+
+
 
 Changelog
 ------------
