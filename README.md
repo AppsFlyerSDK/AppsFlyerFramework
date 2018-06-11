@@ -49,8 +49,8 @@ Then run
 $ carthage bootstrap
 ```
 
-**Note :**
-Old URI referencing `Carthage.json` is deprecated. If you use it please update your Cartfife to the new one to ease dependecy management.
+**Note:**
+Old URI referencing `Carthage.json` is deprecated. If you use it please update your Cartfile to the new one to ease dependency management.
 
 
 
@@ -63,6 +63,6 @@ You can find the release changelog [here](https://support.appsflyer.com/hc/en-us
 
 In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com
 
-*When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
+*When submitting an issue please specify your AppsFlyer sign-up (account) email, your app ID, production steps, logs, code snippets and any additional relevant information.*
 
 ----------
