@@ -2,8 +2,8 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.8.9 (728)
-//  Copyright (c) 2013 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 4.8.10 (754)
+//  Copyright (c) 2018 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -116,9 +116,9 @@
 #define AFEventParamHotelScore              @"af_hotel_score"
 #define AFEventParamPurchaseCurrency        @"af_purchase_currency"
 
-#define AFEventParamPreferredStarRatings    @"af_preferred_star_ratings"    //array of int (basically a tupple (min,max) but we'll use array of int and instruct the developer to use two values)
+#define AFEventParamPreferredStarRatings    @"af_preferred_star_ratings"    //array of int (basically a tuple (min,max) but we'll use array of int and instruct the developer to use two values)
 
-#define AFEventParamPreferredPriceRange     @"af_preferred_price_range"    //array of int (basically a tupple (min,max) but we'll use array of int and instruct the developer to use two values)
+#define AFEventParamPreferredPriceRange     @"af_preferred_price_range"    //array of int (basically a tuple (min,max) but we'll use array of int and instruct the developer to use two values)
 #define AFEventParamPreferredNeighborhoods  @"af_preferred_neighborhoods" //array of string
 #define AFEventParamPreferredNumStops       @"af_preferred_num_stops"
 
@@ -128,9 +128,6 @@
 #define AFEventParamAdRevenueAdSize              @"af_adrev_ad_size"
 #define AFEventParamAdRevenueMediatedNetworkName @"af_adrev_mediated_network_name"
 
-#define kAppsFlyerOneLinkVersion @"oneLinkVersion"
-#define kAppsFlyerOneLinkScheme  @"oneLinkScheme"
-#define kAppsFlyerOneLinkDomain  @"oneLinkDomain"
 #define kDefaultOneLink          @"go.onelink.me"
 #define kNoOneLinkFallback       @"https://app.appsflyer.com"
 #define kINviteAppleAppID        @"af_siteid"
