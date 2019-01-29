@@ -257,7 +257,7 @@ typedef enum  {
 /**
  Set your `OneLink ID` from OneLink configuration. Used in User Invites to generate a OneLink.
  */
-@property (nonatomic, setter = setAppInviteOneLink:) NSString* appInviteOneLinkID;
+@property (nonatomic, strong, setter = setAppInviteOneLink:) NSString* appInviteOneLinkID;
 
 /**
  Opt-out tracking for specific user
