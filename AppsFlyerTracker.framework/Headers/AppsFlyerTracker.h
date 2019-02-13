@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.8.11 (774)
+//  AppsFlyer iOS SDK 4.8.12 (783)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -489,6 +489,19 @@ typedef enum  {
  </pre>
  */
 @property (nonatomic, strong) NSString *host;
+
+- (void)setHost:(NSString *)host DEPRECATED_MSG_ATTRIBUTE("Use -[AppsFlyerTracker setHost:withHostPrefix:] instead");
+
+/**
+ * This function set the host name and prefix host name for all the endpoints
+ **/
+- (void)setHost:(NSString *)host withHostPrefix:(NSString *)hostPrefix;
+
+/**
+ * This property accepts a string value representing the prefix host name for all endpoints.
+ * for example "test" prefix with default host name will have the address "host.appsflyer.com"
+ */
+@property (nonatomic, strong, readonly) NSString *hostPrefix;
 
 /**
  This property is responsible for timeout between sessions in seconds.
