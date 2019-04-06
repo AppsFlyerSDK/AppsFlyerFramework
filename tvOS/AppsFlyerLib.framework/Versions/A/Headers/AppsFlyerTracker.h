@@ -4,7 +4,7 @@
 //
 //  AppsFlyer iOS SDK 4.9.0 (813)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
-//
+//  .
 
 #import <Foundation/Foundation.h>
 #import "AppsFlyerCrossPromotionHelper.h"
