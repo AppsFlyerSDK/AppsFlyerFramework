@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.10.0 (830)
+//  AppsFlyer iOS SDK 4.10.1 (833)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -303,6 +303,38 @@ typedef enum  {
 @property(nonatomic) NSArray<NSString *> *resolveDeepLinkURLs;
 
 /**
+ For advertisers who use vanity OneLinks.
+ 
+ Objective-C:
+ 
+ <pre>
+ [[AppsFlyerTracker sharedTracker] oneLinkCustomDomains:@[@"domain.com", @"subdomain.domain.com"]];
+ </pre>
+ */
+@property(nonatomic) NSArray<NSString *> *oneLinkCustomDomains;
+
+/**
+ Enable the collection of Facebook Deferred AppLinks
+ Requires Facebook SDK and Facebook app on target/client device.
+ This API must be invoked prior to initializing the AppsFlyer SDK in order to function properly.
+ 
+ Objective-C:
+ 
+ <pre>
+ [[AppsFlyerTracker sharedTracker] enableFacebookDeferredApplinksWithClass:[FBSDKAppLinkUtility class]]
+ </pre>
+ 
+ Swift:
+ 
+ <pre>
+ AppsFlyerTracker.shared().enableFacebookDeferredApplinks(with: FBSDKAppLinkUtility.self)
+ </pre>
+ 
+ @param facebookAppLinkUtilityClass requeries method call `[FBSDKAppLinkUtility class]` as param.
+ */
+- (void)enableFacebookDeferredApplinksWithClass:(Class)facebookAppLinkUtilityClass;
+
+/**
  Use this to send the user's emails
  
  @param userEmails The list of strings that hold mails
@@ -360,8 +392,8 @@ typedef enum  {
 - (void)trackEvent:(NSString *)eventName withValues:(NSDictionary *)values;
 
 - (void)trackEventWithEventName:(NSString *)eventName
-                    eventValues:(NSDictionary<NSString * , id> *)eventValues
-              completionHandler:(void (^)(NSDictionary<NSString *, id> * dictionary, NSError * error))completionHandler
+                    eventValues:(NSDictionary<NSString * , id> * )eventValues
+              completionHandler:(void (^)(NSDictionary<NSString *, id> *dictionary, NSError *error))completionHandler
 NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 
 /**
