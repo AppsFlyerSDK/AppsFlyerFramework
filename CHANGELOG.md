@@ -1,13 +1,13 @@
 # Change Log
 This document contains release notes for the AppsFlyer iOS SDK
 
-#### 4.10.x Releases
+#### 4.x.x Releases
 
-- `4.9.0` Release - [4.9.0](#813)
-- `4.10.0` Release - [4.10.0](#830)
-- `4.10.4` Release - [4.10.4](#871)
+- Release - [4.9.0](#490)
+- Release - [4.10.0](#4100)
+- Release - [4.10.4](#4104)
 
---
+
 
 ## [4.9.0](https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/tag/4.9.0)
 Released on March 18, 2019
