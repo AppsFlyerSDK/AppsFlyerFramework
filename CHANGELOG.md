@@ -22,8 +22,8 @@ Released on May 14, 2019
 
 ## [4.10.4](https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/tag/4.10.4)
 Released on September 12, 2019
-- Updated iOS SDK to v4.10.4
-- Support for iOS 13
+- Updated iOS SDK to v4.10.4 - Update for iOS 13 push token retrieval needed for Uninstall Measurement
+- Bug fixes and maintenance
 - Prevent rare crash in `-[AppsFlyerKeychainWrapper initWithIdentifier:withAppId:]`
 - Added ability to set `phoneNumber`
 - Bug fixes and maintenance
