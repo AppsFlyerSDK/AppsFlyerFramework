@@ -24,7 +24,7 @@ Released on May 14, 2019
 Released on September 12, 2019
 - Updated iOS SDK to v4.10.4
 - Support for iOS 13
-– Prevent rare crash in `-[AppsFlyerKeychainWrapper initWithIdentifier:withAppId:]`
-– Added ability to set `phoneNumber`
+- Prevent rare crash in `-[AppsFlyerKeychainWrapper initWithIdentifier:withAppId:]`
+- Added ability to set `phoneNumber`
 - Bug fixes and maintenance
 
