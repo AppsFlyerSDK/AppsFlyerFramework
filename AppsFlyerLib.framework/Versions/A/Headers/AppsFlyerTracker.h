@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.11.1 (916)
+//  AppsFlyer iOS SDK 4.11.2 (922)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -174,6 +174,15 @@ typedef enum  {
  Any errors that occurred during the attribution request.
  */
 - (void)onAppOpenAttributionFailure:(NSError *)error;
+
+/**
+ @abstract Sets the HTTP header fields of the ESP resolving to the given
+ dictionary.
+ @discussion This method replaces all header fields that may have
+ existed before this method ESP resolving call.
+ To keep default SDK dehavior - return nil;
+ */
+- (NSDictionary <NSString *, NSString *> *)allHTTPHeaderFieldsForResolveDeepLinkURL:(NSURL *)URL;
 
 @end
 
