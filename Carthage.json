@@ -24,5 +24,7 @@
   "4.9.0": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.9.0/AppsFlyerTracker.framework.zip",
   "4.10.0": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.10.0/AppsFlyerTracker.framework.zip",
   "4.10.3": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.10.3/AppsFlyerTracker.framework.zip",
-  "4.10.4": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.10.4/AppsFlyerTracker.framework.zip"
+  "4.10.4": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.10.4/AppsFlyerTracker.framework.zip",
+  "4.11.1": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.11.1/AppsFlyerTracker.framework.zip",
+  "4.11.2": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/4.11.2/AppsFlyerTracker.framework.zip"
 }
