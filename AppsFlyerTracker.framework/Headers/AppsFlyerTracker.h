@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 4.11.2 (922)
+//  AppsFlyer iOS SDK 5.0.0 (925)
 //  Copyright (c) 2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -153,17 +153,19 @@ typedef enum  {
  */
 @protocol AppsFlyerTrackerDelegate <NSObject>
 
-@optional
 /**
- `installData` contains information about install.
+ `conversionInfo` contains information about install.
  Organic/non-organic, etc.
+ @param conversionInfo May contain <code>null</code> values for some keys. Please handle this case.
  */
-- (void)onConversionDataReceived:(NSDictionary *)installData;
+- (void)onConversionDataSuccess:(NSDictionary *)conversionInfo;
 
 /**
  Any errors that occurred during the conversion request.
  */
-- (void)onConversionDataRequestFailure:(NSError *)error;
+- (void)onConversionDataFail:(NSError *)error;
+
+@optional
 
 /**
  `attributionData` contains information about OneLink, deeplink.
@@ -457,14 +459,6 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
 - (NSString *)getAppsFlyerUID;
 
 /**
- In case you want to use AppsFlyer tracking data in your app you can use the following method set a
- delegate with callback buttons for the tracking data. See AppsFlyerTrackerDelegate above.
- 
- @param delegate The AppsFlyer delegate reference
- */
-- (void)loadConversionDataWithDelegate:(id<AppsFlyerTrackerDelegate>)delegate __attribute__((deprecated));
-
-/**
  In case you want to track deep linking. Does the same as `-handleOpenURL:sourceApplication:withAnnotation`.
  
  @warning Prefered to use `-handleOpenURL:sourceApplication:withAnnotation`.
@@ -504,13 +498,6 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  */
 - (BOOL)continueUserActivity:(NSUserActivity *)userActivity
           restorationHandler:(void (^)(NSArray *))restorationHandler NS_AVAILABLE_IOS(9_0);
-
-/**
- This method is not used anymore. Exist only for backward compatability. Don't use.
- 
- @param userActivity The NSUserActivity param.
- */
-- (void)didUpdateUserActivity:(NSUserActivity *)userActivity NS_AVAILABLE_IOS(9_0);
 
 /**
  Enable AppsFlyer to handle a push notification.
@@ -561,9 +548,7 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  AppsFlyerTracker.shared().host = "example.com"
  </pre>
  */
-@property(nonatomic, strong) NSString *host;
-
-- (void)setHost:(NSString *)host DEPRECATED_MSG_ATTRIBUTE("Use -[AppsFlyerTracker setHost:withHostPrefix:] instead");
+@property(nonatomic, strong, readonly) NSString *host;
 
 /**
  * This function set the host name and prefix host name for all the endpoints
