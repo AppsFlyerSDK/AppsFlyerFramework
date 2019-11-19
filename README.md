@@ -33,7 +33,7 @@ import AppsFlyerLib
 
 ```objc
 // ObjC
-#import <AppsFlyerTracker/AppsFlyerTracker.h>
+#import <AppsFlyerLib/AppsFlyerTracker.h>
 ```
 
 ### Carthage
