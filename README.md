@@ -1,64 +1,44 @@
-<p align="center">
-  <img height="75" src="repository_assets/AF_color_medium.png" />
-</p>
+![AppsFlyer: Leader of mobile attribution](https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/repository_assets/AF_color_medium.png)
 
 -----------
 [![Version](https://img.shields.io/cocoapods/v/AppsFlyerFramework.svg?style=flat)](http://cocoapods.org/pods/AppsFlyerFramework)
 
+# Table of contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Integration AppsFlyer](#integration-appsflyer)
+- [Changelog](#changelog)
+
+## Introduction
 [AppsFlyer](https://www.appsflyer.com/) helps mobile marketers measure and improve their performance through amazing tools, really big data and over 2,000 integrations.
-
-
 
 - Supports iOS 8+
 
-Installation
-------------
+## Installation
 
 ### CocoaPods
 
-Just add `pod 'AppsFlyerFramework'` into your [Podfile](https://guides.cocoapods.org/syntax/podfile.html).
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-Then run
-
-```zsh
-$ pod install
-```
-
-Finally, import the framework:
-
-```swift
-// Swift
-import AppsFlyerLib
-```
-
-```objc
-// ObjC
-#import <AppsFlyerLib/AppsFlyerTracker.h>
+```ruby
+pod 'AppsFlyerFramework'
 ```
 
 ### Carthage
 
-Just add the following into your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
-```
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
-Then run
+## Integration AppsFlyer
 
-```zsh
-$ carthage bootstrap
-```
-
-**Note:**
-Old URI referencing `Carthage.json` is deprecated. If you use it please update your Cartfile to the new one to ease dependency management.
-
-Integration AppsFlyer
-------------
-## Basic iOS integration
+### Basic iOS integration
 
 // TBD
 
-## Basic macOS integration
+### Basic macOS integration
 
 1. Add `pod 'AppsFlyerFramework', '5.1.0-beta.1'` in Podfile
 2. Run `pod update`
@@ -102,7 +82,7 @@ extension AppDelegate: AppsFlyerTrackerDelegate {
 }    
 ```
 
-Changelog
+## Changelog
 ------------
 
 You can find the release changelog [here](https://support.appsflyer.com/hc/en-us/articles/115001224823-AppsFlyer-iOS-SDK-Release-Notes).
