@@ -52,7 +52,55 @@ $ carthage bootstrap
 **Note:**
 Old URI referencing `Carthage.json` is deprecated. If you use it please update your Cartfile to the new one to ease dependency management.
 
+Integration AppsFlyer
+------------
+## Basic iOS integration
 
+// TBD
+
+## Basic macOS integration
+
+1. Add `pod 'AppsFlyerFramework'` in Podfile
+2. Run `pod update`
+3. Implement in ```AppDelegate```:
+```swift
+import AppsFlyerAttribution
+
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        AppsFlyerTracker.shared().isDebug = true
+        AppsFlyerTracker.shared().appsFlyerDevKey = "devkey";
+        AppsFlyerTracker.shared().appleAppID = "1234567890"
+        AppsFlyerTracker.shared().delegate = self
+        AppsFlyerTracker.shared().trackAppLaunch()
+    }
+}    
+```
+**Note:** AppsFlyerTracker setup *must* be in `-applicationWillFinishLaunching:` and not in `-applicationDidFinishLaunching:`
+
+**Note:** `-trackAppLaunch` call in `-applicationWillFinishLaunching:`
+
+4. Implement delegates:
+```swift
+extension AppDelegate: AppsFlyerTrackerDelegate {
+    func onConversionDataSuccess(_ conversionInfo: [String : Any]) {
+        print(conversionInfo)
+    }
+    
+    func onConversionDataFail(_ error: Error) {
+        print(error)
+    }
+    
+    func onAppOpenAttribution(_ attributionData: [String : Any]) {
+        print(attributionData)
+    }
+    
+    func onAppOpenAttributionFailure(_ error: Error) {
+        print(error)
+    }
+}    
+```
 
 Changelog
 ------------
