@@ -5,6 +5,7 @@
 
 # Table of contents
 - [Introduction](#introduction)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Integration AppsFlyer](#integration-appsflyer)
 - [Changelog](#changelog)
@@ -12,7 +13,8 @@
 ## Introduction
 [AppsFlyer](https://www.appsflyer.com/) helps mobile marketers measure and improve their performance through amazing tools, really big data and over 2,000 integrations.
 
-- Supports iOS 8+
+## Requirements
+- iOS 8.0+ / macOS 10.11+ / tvOS 9.0+
 
 ## Installation
 
@@ -36,7 +38,49 @@ binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master
 
 ### Basic iOS integration
 
-// TBD
+1. Add `pod 'AppsFlyerFramework' in Podfile
+2. Run `pod update`
+3. Implement in ```AppDelegate```:
+```swift
+import AppsFlyerLib
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        AppsFlyerTracker.shared().isDebug = true
+        AppsFlyerTracker.shared().appsFlyerDevKey = "devkey";
+        AppsFlyerTracker.shared().appleAppID = "1234567890"
+        AppsFlyerTracker.shared().delegate = self
+    }
+}
+
+func applicationDidBecomeActive(_ application: UIApplication) {        
+        AppsFlyerTracker.shared().trackAppLaunch()
+}
+```
+4. Implement delegates:
+```swift
+extension AppDelegate: AppsFlyerTrackerDelegate {
+    func onConversionDataSuccess(_ conversionInfo: [String : Any]) {
+        print(conversionInfo)
+    }
+    
+    func onConversionDataFail(_ error: Error) {
+        print(error)
+    }
+    
+    func onAppOpenAttribution(_ attributionData: [String : Any]) {
+        print(attributionData)
+    }
+    
+    func onAppOpenAttributionFailure(_ error: Error) {
+        print(error)
+    }
+}    
+```
 
 ### Basic macOS integration
 
