@@ -87,9 +87,9 @@ extension AppDelegate: AppsFlyerTrackerDelegate {
 }    
 ```
 
-### Basic macOS integration
+### Basic macOS integration(*BETA*)
 
-1. Add `pod 'AppsFlyerFramework', '5.1.0-beta.1'` in Podfile
+1. Add `pod 'AppsFlyerFramework', '5.1.0'` in Podfile
 2. Run `pod update`
 3. Implement in ```AppDelegate```:
 ```swift
