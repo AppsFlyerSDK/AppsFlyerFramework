@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK v5.1.0
+//  AppsFlyer iOS SDK 5.1.0 (951)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -158,7 +158,7 @@ typedef enum  {
  Organic/non-organic, etc.
  @param conversionInfo May contain <code>null</code> values for some keys. Please handle this case.
  */
-- (void)onConversionDataSuccess:(NSDictionary<NSString *, id> *)conversionInfo;
+- (void)onConversionDataSuccess:(NSDictionary *)conversionInfo;
 
 /**
  Any errors that occurred during the conversion request.
@@ -170,7 +170,7 @@ typedef enum  {
 /**
  `attributionData` contains information about OneLink, deeplink.
  */
-- (void)onAppOpenAttribution:(NSDictionary<NSString *, id> *)attributionData;
+- (void)onAppOpenAttribution:(NSDictionary *)attributionData;
 
 /**
  Any errors that occurred during the attribution request.
