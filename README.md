@@ -35,18 +35,19 @@ pod 'AppsFlyerFramework'
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
 
-To integrate AppsFlyerFramework 5.0.0 version into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
-```
-
-In order to apply AppsFlyerFramework 5.1.0 version, specify following contents in your `Cartfile`:
+To integrate AppsFlyerFramework 5.1.0 version into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
 ```
 Starting from the 5.1.0 version, AppsflyerFramework is a static library, so make sure, that in your project settings `General -> Frameworks, Libraries and Embedded Content` you choose `Do not embed` option for `AppsFlyerLib.framework` file.
+
+
+In order to integrate deprecated AppsFlyerFramework version, specify following contents in your `Cartfile`:
+
+```ogdl
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
+```
 
 ## Integration AppsFlyer
 
