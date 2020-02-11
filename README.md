@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/cocoapods/v/AppsFlyerFramework.svg?style=flat)](http://cocoapods.org/pods/AppsFlyerFramework)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-# Table of contents
+## Table of contents
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -37,16 +37,15 @@ pod 'AppsFlyerFramework'
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
 
-To integrate AppsFlyerFramework 5.1.0 version or higher into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate AppsFlyerFramework `5.1.0` version or higher into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
 ```
-Starting from the version `5.1.0` and higher, **AppsFlyerFramework** is a **static** library. In order to successfully integrate it, please follow next steps: 
+Starting from the version `5.1.0` and higher, **AppsFlyerLib.framework** is a **static** framework. In order to successfully integrate it, please follow next steps: 
 
-- In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Static library**;
 - In your project settings `General -> Frameworks, Libraries and Embedded Content`  add `AppsFlyerLib.framework` and set `Do not embed` option for it;
-- Make sure you remove and do not add any static libraries as input/output files for `/usr/local/bin/carthage copy-frameworks` **Run script**.
+- Make sure you remove and do not add any static frameworks as input/output files for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
 In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
 
@@ -54,7 +53,6 @@ In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify foll
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
-- In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Dynamic library**;
 - Add **AppsFlyerTracker.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
 - Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
