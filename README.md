@@ -43,15 +43,19 @@ binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master
 Starting from the version `5.1.0` and higher, **AppsflyerFramework** is a **static** library. In order to successfully integrate it, please follow next steps: 
 ***Note:***
 - In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Static library**;
-- In your project settings `General -> Frameworks, Libraries and Embedded Content` set `Do not embed` option for `AppsFlyerLib.framework` file;
+- In your project settings `General -> Frameworks, Libraries and Embedded Content`  add `AppsFlyerLib.framework` and set `Do not embed` option for it;
 - Make sure you remove and do not add any static libraries as input/output files for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
-In order to integrate  AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
+In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
+***Note:***
+- In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Dynamic library**;
+- Add **AppsFlyer.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
+- Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
 ## Integration AppsFlyer
 
