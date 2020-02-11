@@ -40,7 +40,7 @@ To integrate AppsFlyerFramework 5.1.0 version or higher into your Xcode project 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
 ```
-Starting from the version `5.1.0` and higher, **AppsflyerFramework** is a **static** library. In order to successfully integrate it, please follow next steps: 
+Starting from the version `5.1.0` and higher, **AppsFlyerFramework** is a **static** library. In order to successfully integrate it, please follow next steps: 
 
 - In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Static library**;
 - In your project settings `General -> Frameworks, Libraries and Embedded Content`  add `AppsFlyerLib.framework` and set `Do not embed` option for it;
@@ -53,7 +53,7 @@ binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master
 ```
 
 - In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Dynamic library**;
-- Add **AppsFlyer.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
+- Add **AppsFlyerLib.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
 - Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
 ## Integration AppsFlyer
