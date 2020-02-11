@@ -37,7 +37,7 @@ pod 'AppsFlyerFramework'
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
 
-To integrate AppsFlyerFramework `5.1.0` version or higher into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate AppsFlyerFramework `5.1.0` version or higher for `Carthage` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
