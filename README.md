@@ -53,7 +53,7 @@ binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master
 ```
 
 - In your project's target, which implements **AppsFlyerFramework** go to `Build settings -> Linking` and set **Match-O Type** to **Dynamic library**;
-- Add **AppsFlyerLib.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
+- Add **AppsFlyerTracker.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
 - Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
 ## Integration AppsFlyer
