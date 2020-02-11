@@ -1,9 +1,11 @@
-![AppsFlyer: Leader of mobile attribution](https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/repository_assets/AF_color_medium.png)
+<img src="https://www.appsflyer.com/wp-content/uploads/2016/11/logo-1.svg"  width="450">
 
------------
+# AppsFlyerFramework
+
 [![Version](https://img.shields.io/cocoapods/v/AppsFlyerFramework.svg?style=flat)](http://cocoapods.org/pods/AppsFlyerFramework)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-# Table of contents
+## Table of contents
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -33,11 +35,26 @@ pod 'AppsFlyerFramework'
 
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate AppsFlyer into your Xcode project using Carthage, specify it in your `Cartfile`:
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
+
+To integrate AppsFlyerFramework `5.1.0` version or higher for `Carthage` into your Xcode project, specify it in your `Cartfile`:
+
+```ogdl
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
+```
+Starting from the version `5.1.0` and higher, **AppsFlyerLib.framework** is a **static** framework. In order to successfully integrate it, please follow next steps: 
+
+- In your project settings `General -> Frameworks, Libraries and Embedded Content`  add `AppsFlyerLib.framework` and set `Do not embed` option for it;
+- Make sure you remove and do not add any static frameworks as input/output files for `/usr/local/bin/carthage copy-frameworks` **Run script**.
+
+In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
 
 ```ogdl
 binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
+
+- Add **AppsFlyerTracker.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
+- Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
 
 ## Integration AppsFlyer
 
