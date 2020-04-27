@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 5.2.0 (964)
+//  AppsFlyer iOS SDK 5.3.0 (128)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -529,6 +529,15 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  This is for internal use.
  */
 - (void)remoteDebuggingCallWithData:(NSString *)data;
+
+/**
+ Used to force the trigger `onAppOpenAttribution` delegate.
+ Notice, re-engagement, session and launch won't be counted.
+ Only for OneLink/UniversalLink/Deeplink resolving.
+ 
+ @param URL The param to resolve into -[AppsFlyerTrackerDelegate onAppOpenAttribution:]
+ */
+- (void)performOnAppAttributionWithURL:(NSURL * _Nullable)URL;
 
 /**
  @brief This property accepts a string value representing the host name for all endpoints.

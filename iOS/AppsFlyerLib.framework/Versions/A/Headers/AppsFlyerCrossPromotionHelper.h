@@ -25,7 +25,20 @@ NS_ASSUME_NONNULL_BEGIN
  @param campaign A campaign name
  */
 + (void)trackCrossPromoteImpression:(nonnull NSString *)appID
-                           campaign:(nullable NSString *)campaign;
+                           campaign:(nullable NSString *)campaign
+ DEPRECATED_MSG_ATTRIBUTE("Use +[AppsFlyerCrossPromotionHelper trackCrossPromoteImpression:campaign:parameters:] instead.");
+
+/**
+ To track an impression use the following API call.
+ Make sure to use the promoted App ID as it appears within the AppsFlyer dashboard.
+
+ @param appID Promoted App ID
+ @param campaign A campaign name
+ @param parameters Additional params like `@{@"af_sub1": @"val", @"custom_param": @"val2" }`
+*/
++ (void)trackCrossPromoteImpression:(nonnull NSString *)appID
+                           campaign:(nullable NSString *)campaign
+                         parameters:(nullable NSDictionary *)parameters;
 
 /**
  iOS allows you to utilize the StoreKit component to open
