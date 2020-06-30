@@ -2,7 +2,7 @@
 //  AppsFlyerTracker.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 5.4.0 (133)
+//  AppsFlyer iOS SDK 5.4.1 (139)
 //  Copyright (c) 2012-2019 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -587,6 +587,18 @@ NS_SWIFT_NAME(trackEvent(name:values:completionHandler:));
  API to set manually Facebook deferred app link
  */
 @property(nonatomic, nullable) NSURL *facebookDeferredAppLink;
+
+/**
+ Block an events from being shared with ad networks and other 3rd party integrations
+ Must only include letters/digits or underscore, maximum length: 45
+ */
+@property(nonatomic, nullable) NSArray<NSString *> *sharingFilter;
+
+/**
+ Block an events from being shared with any partner
+ This method overwrite -[AppsFlyerTracker setSharingFilter:]
+ */
+-(void)setSharingFilterForAllPartners;
 
 @end
 
