@@ -37,11 +37,13 @@ pod 'AppsFlyerFramework'
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
 
-To integrate AppsFlyerFramework `5.1.0` version or higher for `Carthage` into your Xcode project, specify it in your `Cartfile`:
+To integrate AppsFlyerFramework versions for `Carthage` into your Xcode project, specify it in your `Cartfile`:
 
 ```ogdl
-binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerLib.json"
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage/appsflyer-ios.json
+"
 ```
+
 Starting from the version `5.1.0` and higher, **AppsFlyerLib.framework** is a **static** framework. In order to successfully integrate it, please follow next steps: 
 
 - In your project settings `General -> Frameworks, Libraries and Embedded Content`  add `AppsFlyerLib.framework` and set `Do not embed` option for it;
@@ -50,11 +52,13 @@ Starting from the version `5.1.0` and higher, **AppsFlyerLib.framework** is a **
 In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
 
 ```ogdl
-binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage/appsflyer-ios.json"
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
 - Add **AppsFlyerTracker.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
 - Make sure to add AppsFlyerFramework Build path as input file for `/usr/local/bin/carthage copy-frameworks` **Run script**.
+
+*The old paths are deprecated and will not be handled in the future.*
 
 ## Integration AppsFlyer
 
