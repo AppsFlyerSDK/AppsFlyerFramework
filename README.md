@@ -50,7 +50,7 @@ Starting from the version `5.1.0` and higher, **AppsFlyerLib.framework** is a **
 In order to integrate AppsFlyerFramework version `5.0.0` and lower, specify following contents in your `Cartfile`:
 
 ```ogdl
-binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/Carthage/appsflyer-ios.json"
+binary "https://raw.githubusercontent.com/AppsFlyerSDK/AppsFlyerFramework/master/AppsFlyerTracker.json"
 ```
 
 - Add **AppsFlyerTracker.framework** file to `General -> Frameworks, Libraries and Embedded Content`;
