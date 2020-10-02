@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFramework'
-    s.version          = '6.0.4'
+    s.version          = '6.0.5'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
 
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '9.0'
     s.tvos.deployment_target = '9.0'
     s.osx.deployment_target = '10.11'
 
