@@ -13,3 +13,37 @@ In order for us to provide optimal support, we would kindly ask you to submit an
 
 
 When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , reproduction steps, logs, code snippets and any additional relevant information.
+
+---
+
+## Swift Package Manager
+### Introduction
+AppsFlyer SDK version 6.0.8 (ONLY!) supports installation via [Swift Package Manager](https://swift.org/package-manager/).
+
+### Installation
+In Xcode go to: ```File -> Swift Packages -> Add Package Dependency...```
+
+![Step 1](https://github.com/amit-kremer93/resources/blob/main/1.png)
+
+Enter the AppsFlyer SDK GitHub repository - ```https://github.com/AppsFlyerSDK/AppsFlyerFramework```
+
+![Step 2](https://github.com/amit-kremer93/resources/blob/main/2.png)
+
+Select the exact SDK version 6.0.8
+
+![Step 3](https://github.com/amit-kremer93/resources/blob/main/3.png)
+
+Select the AppsFlyerLib library
+
+![Step 4](https://github.com/amit-kremer93/resources/blob/main/4.png)
+
+In your ```AppDelegate``` file: import AppsFlyerLib module
+
+![Step 5](https://github.com/amit-kremer93/resources/blob/main/5.png)
+
+Start to use AppsFlyer SDK
+
+![Step 6](https://github.com/amit-kremer93/resources/blob/main/6.png)
+
+
+
