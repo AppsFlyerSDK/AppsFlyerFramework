@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.0.7 (7)
+//  AppsFlyer iOS SDK 6.0.8 (15)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -584,6 +584,18 @@ NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
  This method overwrite -[AppsFlyerLib setSharingFilter:]
  */
 -(void)setSharingFilterForAllPartners;
+
+/**
+ Validate if URL contains certain string and append quiery
+ parameters to deeplink URL. In case if URL does not contain user-defined string,
+ parameters are not appended to the url.
+ 
+ @param containsString string to check in URL.
+ @param parameters NSDictionary, which containins parameters to append to the deeplink url after it passed validation.
+ */
+- (void)appendParametersToDeepLinkingURLWithString:(NSString *)containsString
+                                                   parameters:(NSDictionary<NSString *, NSString*> *)parameters
+NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
 
 @end
 
