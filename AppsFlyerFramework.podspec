@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFramework'
-    s.version          = '6.1.0'
+    s.version          = '6.1.1'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -24,13 +24,31 @@ Pod::Spec.new do |s|
     s.tvos.frameworks  = 'Security'
     s.osx.frameworks  = 'Security'
 
-    s.ios.preserve_paths = 'iOS/AppsFlyerLib.framework'
-    s.ios.vendored_frameworks = 'iOS/AppsFlyerLib.framework'
-
-    s.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
-    s.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
-
-    s.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
-    s.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+    s.default_subspecs = 'Main'
+    s.subspec 'Main' do |ss|
+       ss.ios.preserve_paths = 'iOS/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'iOS/AppsFlyerLib.framework'
+       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+  end
+  s.subspec 'Strict' do |ss|
+       ss.ios.preserve_paths = 'iOS-Strict/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'iOS-Strict/AppsFlyerLib.framework'
+       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+  end
+  s.subspec 'MacCatalyst' do |ss|
+       ss.ios.preserve_paths = 'MacCatalyst/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'MacCatalyst/AppsFlyerLib.xcframework'
+       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
+       ss.osx.preserve_paths = 'macOS/AppsFlyerAttribution.framework'
+       ss.osx.vendored_frameworks = 'macOS/AppsFlyerAttribution.framework'
+  end
+  
 
 end
