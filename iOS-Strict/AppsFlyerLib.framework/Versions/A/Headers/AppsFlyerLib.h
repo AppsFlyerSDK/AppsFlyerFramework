@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.1.2 (39)
+//  AppsFlyer iOS SDK 6.1.3 (43)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -281,6 +281,8 @@ NS_SWIFT_NAME(DeepLinkDelegate)
  Opt-out for Apple Search Ads attributions
  */
 @property(atomic) BOOL disableCollectASA;
+
+@property(nonatomic) BOOL disableAppleAdsAttribution;
 
 /**
  AppsFlyer delegate. See `AppsFlyerLibDelegate`
@@ -598,6 +600,14 @@ NS_SWIFT_NAME(logEvent(name:values:completionHandler:));
 - (void)appendParametersToDeepLinkingURLWithString:(NSString *)containsString
                                         parameters:(NSDictionary<NSString *, NSString*> *)parameters
 NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
+
+/**
+ Adds array of keys, which are used to compose key path
+ to resolve deeplink from push notification payload `userInfo`.
+ 
+ @param deepLinkPath an array of strings which contains keys to search for deeplink in payload.
+ */
+- (void)addPushNotificationDeepLinkPath:(NSArray<NSString *> *)deepLinkPath;
 
 @end
 
