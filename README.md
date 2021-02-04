@@ -29,7 +29,7 @@ Enter the AppsFlyer SDK GitHub repository - ```https://github.com/AppsFlyerSDK/A
 
 ![Step 2](https://github.com/amit-kremer93/resources/blob/main/2.png)
 
-Select the exact SDK version 6.1.0
+Select the SDK version
 
 ![Step 3](https://github.com/amit-kremer93/resources/blob/main/3.png)
 
