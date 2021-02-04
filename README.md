@@ -18,7 +18,7 @@ When submitting an issue please specify your AppsFlyer sign-up (account) email ,
 
 ## Swift Package Manager
 ### Introduction
-AppsFlyer SDK version 6.1.0 (ONLY!) supports installation via [Swift Package Manager](https://swift.org/package-manager/).
+AppsFlyer SDK version 6.1.x+ supports installation via [Swift Package Manager](https://swift.org/package-manager/).
 
 ### Installation
 In Xcode go to: ```File -> Swift Packages -> Add Package Dependency...```
