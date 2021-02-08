@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.1.4 (48)
+//  AppsFlyer iOS SDK 6.2.0 (56)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -78,7 +78,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventProjectedParamRevenue       @"af_projected_revenue"
 #define AFEventParamReceiptId              @"af_receipt_id"
 #define AFEventParamTutorialId             @"af_tutorial_id"
-#define AFEventParamAchievementId          @"af_achievement_id"
 #define AFEventParamVirtualCurrencyName    @"af_virtual_currency_name"
 #define AFEventParamDeepLink               @"af_deep_link"
 #define AFEventParamOldVersion             @"af_old_version"
@@ -624,6 +623,16 @@ NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
  @param deepLinkPath an array of strings which contains keys to search for deeplink in payload.
  */
 - (void)addPushNotificationDeepLinkPath:(NSArray<NSString *> *)deepLinkPath;
+
+/**
+ * Allows sending custom data for partner integration purposes.
+ *
+ * @param partnerId ID of the partner (usually has "_int" suffix)
+ * @param partnerData customer data, depends on the integration nature with specific partner
+ */
+
+- (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId partnerInfo:(NSDictionary<NSString *, id> * _Nullable)partnerInfo
+NS_SWIFT_NAME(setPartnerData(partnerId:partnerInfo:));
 
 @end
 
