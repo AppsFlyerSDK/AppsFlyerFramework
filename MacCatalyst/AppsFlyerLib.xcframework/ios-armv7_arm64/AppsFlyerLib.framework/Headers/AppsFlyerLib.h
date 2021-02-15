@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.2.0 (56)
+//  AppsFlyer iOS SDK 6.2.1 (61)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -628,7 +628,7 @@ NS_SWIFT_NAME(appendParametersToDeeplinkURL(contains:parameters:));
  * Allows sending custom data for partner integration purposes.
  *
  * @param partnerId ID of the partner (usually has "_int" suffix)
- * @param partnerData customer data, depends on the integration nature with specific partner
+ * @param partnerInfo customer data, depends on the integration nature with specific partner
  */
 
 - (void)setPartnerDataWithPartnerId:(NSString * _Nullable)partnerId partnerInfo:(NSDictionary<NSString *, id> * _Nullable)partnerInfo
