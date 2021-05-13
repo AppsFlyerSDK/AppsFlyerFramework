@@ -1,6 +1,0 @@
-framework module AppsFlyerAttribution {
- umbrella header "AppsFlyerLib.h" 
-
-  export *
-  module * { export * }
- }
