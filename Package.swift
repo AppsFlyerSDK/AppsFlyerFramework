@@ -12,7 +12,7 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .binaryTarget(name: "AppsFlyerLib", path: "AppsFlyerLib.xcframework")
-        .binaryTarget(name: "AppsFlyerLib-Strict", path: "Strict/AppsFlyerLib.xcframework")
+        .binaryTarget(name: "AppsFlyerLib", path: "AppsFlyerLib.xcframework"),
+        .binaryTarget(name: "AppsFlyerLib-Strict", path: "Strict/AppsFlyerLib.xcframework"),
     ]
 )
