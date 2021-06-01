@@ -7,7 +7,7 @@ let package = Package(
     name: "AppsFlyerLib",
     products: [
         .library(name: "AppsFlyerLib", targets: ["AppsFlyerLib"]),
-        .library(name: "AppsFlyerLib-Strict", targets: ["AppsFlyerLib"]),
+        .library(name: "AppsFlyerLib-Strict", targets: ["AppsFlyerLib-Strict"]),
     ],
     dependencies: [
     ],
