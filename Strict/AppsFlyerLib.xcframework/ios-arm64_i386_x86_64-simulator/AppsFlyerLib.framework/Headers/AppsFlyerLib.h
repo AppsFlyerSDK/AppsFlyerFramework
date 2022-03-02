@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.5.2 (55)
+//  AppsFlyer iOS SDK 6.5.3 (60)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -95,6 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define AFEventParam8                      @"af_param_8"
 #define AFEventParam9                      @"af_param_9"
 #define AFEventParam10                     @"af_param_10"
+#define AFEventParamTouch                  @"af_touch_obj"
 
 #define AFEventParamDepartingDepartureDate  @"af_departing_departure_date"
 #define AFEventParamReturningDepartureDate  @"af_returning_departure_date"
