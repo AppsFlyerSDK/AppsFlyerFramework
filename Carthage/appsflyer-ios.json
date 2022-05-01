@@ -64,5 +64,6 @@
  "6.5.1": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.1/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.1/AppsFlyerLib.xcframework.zip",
  "6.5.2": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.2/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.2/AppsFlyerLib.xcframework.zip",
  "6.5.3": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.3/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.3/AppsFlyerLib.xcframework.zip",
- "6.5.4": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.4/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.4/AppsFlyerLib.xcframework.zip"
+ "6.5.4": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.4/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.5.4/AppsFlyerLib.xcframework.zip",
+ "6.6.0": "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.6.0/appsflyer-ios.framework.zip?alt=https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.6.0/AppsFlyerLib.xcframework.zip"
 }
