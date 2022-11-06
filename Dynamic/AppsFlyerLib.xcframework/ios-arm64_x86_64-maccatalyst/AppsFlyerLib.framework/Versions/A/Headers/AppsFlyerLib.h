@@ -2,16 +2,16 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.8.1 (86)
+//  AppsFlyer iOS SDK 6.9.0 (90)
 //  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "AppsFlyerCrossPromotionHelper.h"
-#import "AppsFlyerShareInviteHelper.h"
-#import "AppsFlyerDeepLinkResult.h"
-#import "AppsFlyerDeepLink.h"
+#import <AppsFlyerLib/AppsFlyerCrossPromotionHelper.h>
+#import <AppsFlyerLib/AppsFlyerShareInviteHelper.h>
+#import <AppsFlyerLib/AppsFlyerDeepLinkResult.h>
+#import <AppsFlyerLib/AppsFlyerDeepLink.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -136,10 +136,6 @@ NS_ASSUME_NONNULL_BEGIN
 typedef enum  {
     /// None
     EmailCryptTypeNone = 0,
-    /// SHA1
-    EmailCryptTypeSHA1 = 1,
-    /// MD5
-    EmailCryptTypeMD5 = 2,
     /// SHA256
     EmailCryptTypeSHA256 = 3
 } EmailCryptType;
