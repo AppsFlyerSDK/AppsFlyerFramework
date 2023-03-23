@@ -1,0 +1,24 @@
+name: Close issue - support
+on:
+  issues:
+    types:
+      - labeled
+jobs:
+  close-support-issue:
+    if: github.event.label.name == 'support'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close issue with support comment
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: |
+            👋 Hi @${{ github.event.issue.user.login }} and Thank you for reaching out to us.
+            In order for us to provide optimal support, please submit a ticket to our support team at support@appsflyer.com.
+            When submitting the ticket, please provide:
+            - ✅ your AppsFlyer sign-up (account) email
+            - ✅ app ID
+            - ✅ production steps
+            - ✅ logs
+            - ✅ code snippets
+            - ✅ and any additional relevant information.
