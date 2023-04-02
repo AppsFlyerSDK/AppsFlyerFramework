@@ -2,8 +2,8 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.10.0 (104)
-//  Copyright (c) 2012-2020 AppsFlyer Ltd. All rights reserved.
+//  AppsFlyer iOS SDK 6.10.1 (109)
+//  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -139,6 +139,27 @@ typedef enum  {
     /// SHA256
     EmailCryptTypeSHA256 = 3
 } EmailCryptType;
+
+typedef NS_CLOSED_ENUM (NSInteger ,AFSDKPlugin) {
+    AFSDKPluginIOSNative,
+    AFSDKPluginUnity,
+    AFSDKPluginFlutter,
+    AFSDKPluginReactNative,
+    AFSDKPluginAdobeAir,
+    AFSDKPluginAdobeMobile,
+    AFSDKPluginCocos2dx,
+    AFSDKPluginCordova,
+    AFSDKPluginMparticle,
+    AFSDKPluginNativeScript,
+    AFSDKPluginExpo,
+    AFSDKPluginUnreal,
+    AFSDKPluginXamarin,
+    AFSDKPluginCapacitor,
+    AFSDKPluginSegment,
+    AFSDKPluginAdobeSwiftAEP
+} NS_SWIFT_NAME(Plugin);
+
+@class AFSDKPluginInfo;
 
 NS_SWIFT_NAME(DeepLinkDelegate)
 @protocol AppsFlyerDeepLinkDelegate <NSObject>
@@ -298,6 +319,9 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  */
 @property(atomic) BOOL disableCollectASA;
 
+/**
+ Disable Apple Ads Attribution API +[AAAtribution attributionTokenWithError:]
+ */
 @property(nonatomic) BOOL disableAppleAdsAttribution;
 
 /**
@@ -368,6 +392,11 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
  */
 @property(nonatomic, nullable) NSString *currentDeviceLanguage;
 
+/**
+ Internal API. Please don't use.
+ */
+- (void)setPluginInfoWith:(AFSDKPlugin)plugin pluginVersion:(NSString *)version additionalParams:(NSDictionary * _Nullable)additionalParams
+NS_SWIFT_NAME(setPluginInfo(plugin:version:additionalParams:));
 /**
  Enable the collection of Facebook Deferred AppLinks
  Requires Facebook SDK and Facebook app on target/client device.
