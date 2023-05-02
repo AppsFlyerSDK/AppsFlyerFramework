@@ -2,7 +2,7 @@
 //  AppsFlyerLib.h
 //  AppsFlyerLib
 //
-//  AppsFlyer iOS SDK 6.10.1 (109)
+//  AppsFlyer iOS SDK 6.11.0 (114)
 //  Copyright (c) 2012-2023 AppsFlyer Ltd. All rights reserved.
 //
 
@@ -140,7 +140,7 @@ typedef enum  {
     EmailCryptTypeSHA256 = 3
 } EmailCryptType;
 
-typedef NS_CLOSED_ENUM (NSInteger ,AFSDKPlugin) {
+typedef NS_CLOSED_ENUM(NSInteger, AFSDKPlugin) {
     AFSDKPluginIOSNative,
     AFSDKPluginUnity,
     AFSDKPluginFlutter,
@@ -159,7 +159,6 @@ typedef NS_CLOSED_ENUM (NSInteger ,AFSDKPlugin) {
     AFSDKPluginAdobeSwiftAEP
 } NS_SWIFT_NAME(Plugin);
 
-@class AFSDKPluginInfo;
 
 NS_SWIFT_NAME(DeepLinkDelegate)
 @protocol AppsFlyerDeepLinkDelegate <NSObject>
@@ -395,8 +394,11 @@ NS_SWIFT_NAME(waitForATTUserAuthorization(timeoutInterval:));
 /**
  Internal API. Please don't use.
  */
-- (void)setPluginInfoWith:(AFSDKPlugin)plugin pluginVersion:(NSString *)version additionalParams:(NSDictionary * _Nullable)additionalParams
+- (void)setPluginInfoWith:(AFSDKPlugin)plugin
+            pluginVersion:(NSString *)version
+         additionalParams:(NSDictionary * _Nullable)additionalParams
 NS_SWIFT_NAME(setPluginInfo(plugin:version:additionalParams:));
+
 /**
  Enable the collection of Facebook Deferred AppLinks
  Requires Facebook SDK and Facebook app on target/client device.
