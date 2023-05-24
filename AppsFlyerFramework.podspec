@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'AppsFlyerFramework'
-    s.version          = '6.11.0'
+    s.version          = '6.11.1'
     s.summary          = 'AppsFlyer iOS SDK'
 
     s.description      = <<-DESC
@@ -12,9 +12,12 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://www.appsflyer.com'
     s.license          = { :type => 'Proprietary', :text => 'Copyright 2018 AppsFlyer Ltd. All rights reserved.' }
     s.author           = { 'Maxim' => 'maxim\@appsflyer.com', 'Andrii' => 'andrii.h\@appsflyer.com' }
-    s.source           = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerFramework.git', :tag => s.version.to_s }
     s.requires_arc = true
     s.platform     = :ios, :tvos, :osx
+    s.source       = {
+        http: "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.11.1/AppsFlyerLib-Binaries.zip",
+        sha256: "808c6de388478a7e818e5fb347d6ba867a9925229ae62859a9624d92f30afb3a"
+    }
 
     s.ios.deployment_target = '9.0'
     s.tvos.deployment_target = '9.0'
@@ -22,18 +25,14 @@ Pod::Spec.new do |s|
 
     s.ios.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony'
     s.osx.frameworks  = 'Security'
-
-    s.default_subspecs = 'Main'
+	s.default_subspecs = 'Main'
 
     s.subspec 'Main' do |ss|
-       ss.ios.preserve_paths = 'AppsFlyerLib.xcframework'
-       ss.ios.vendored_frameworks = 'AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
 
-       ss.tvos.preserve_paths = 'AppsFlyerLib.xcframework'
-       ss.tvos.vendored_frameworks = 'AppsFlyerLib.xcframework'
+       ss.tvos.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
 
-       ss.osx.preserve_paths = 'AppsFlyerLib.xcframework'
-       ss.osx.vendored_frameworks = 'AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
     end
 
     s.subspec 'Legacy' do |ss|
@@ -41,35 +40,25 @@ Pod::Spec.new do |s|
        ss.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
        ss.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e', 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64 arm64e'}
 
-       ss.ios.preserve_paths = 'iOS/AppsFlyerLib.framework'
-       ss.ios.vendored_frameworks = 'iOS/AppsFlyerLib.framework'
+       ss.ios.vendored_frameworks = 'binaries/ios/AppsFlyerLib.framework'
 
-       ss.tvos.preserve_paths = 'tvOS/AppsFlyerLib.framework'
-       ss.tvos.vendored_frameworks = 'tvOS/AppsFlyerLib.framework'
+       ss.tvos.vendored_frameworks = 'binaries/tv/AppsFlyerLib.framework'
 
-       ss.osx.preserve_paths = 'AppsFlyerLib.xcframework'
-       ss.osx.vendored_frameworks = 'AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
   end
   s.subspec 'Strict' do |ss|
-       ss.ios.preserve_paths = 'Strict/AppsFlyerLib.xcframework'
-       ss.ios.vendored_frameworks = 'Strict/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
 
-       ss.tvos.preserve_paths = 'Strict/AppsFlyerLib.xcframework'
-       ss.tvos.vendored_frameworks = 'Strict/AppsFlyerLib.xcframework'
+       ss.tvos.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
 
-       ss.osx.preserve_paths = 'Strict/AppsFlyerLib.xcframework'
-       ss.osx.vendored_frameworks = 'Strict/AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'binaries/xcframework/strict/AppsFlyerLib.xcframework'
   end
 
   s.subspec 'Dynamic' do |ss|
-       ss.ios.preserve_paths = 'Dynamic/AppsFlyerLib.xcframework'
-       ss.ios.vendored_frameworks = 'Dynamic/AppsFlyerLib.xcframework'
+       ss.ios.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
 
-       ss.tvos.preserve_paths = 'Dynamic/AppsFlyerLib.xcframework'
-       ss.tvos.vendored_frameworks = 'Dynamic/AppsFlyerLib.xcframework'
+       ss.tvos.vendored_frameworks = 'binaries/xcframework/dynamic/AppsFlyerLib.xcframework'
        # Dynamic framework does not support pure OSX yet
-       ss.osx.preserve_paths = 'AppsFlyerLib.xcframework'
-       ss.osx.vendored_frameworks = 'AppsFlyerLib.xcframework'
+       ss.osx.vendored_frameworks = 'binaries/xcframework/full/AppsFlyerLib.xcframework'
   end
-
 end
