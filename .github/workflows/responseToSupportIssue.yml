@@ -1,0 +1,11 @@
+# This workflow triggers the org-wide reusable workflow to respond to issues labeled as 'support'
+on:
+  issues:
+    types:
+      - labeled
+  workflow_dispatch:
+
+jobs:
+  add-comment:
+    uses: AppsFlyerSDK/github-common-workflow-and-template/.github/workflows/responseToSupportIssue.yml@main
+    secrets: inherit 
