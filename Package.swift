@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AppsFlyerLib",
-            url: "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.17.8/AppsFlyerLib-Static-SPM.xcframework.zip",
-            checksum: "c19336df4de0f3cdd20d0bcb2e9d3537c2e8dce7a76774ba3f375f83ce7f6a63"
+            url: "https://github.com/AppsFlyerSDK/AppsFlyerFramework/releases/download/6.17.9/AppsFlyerLib-Static-SPM.xcframework.zip",
+            checksum: "53401aae73d5f38a1f74a41c8778a88b3434c55d896afff199f7f20e514ec296"
         )
     ]
 )
